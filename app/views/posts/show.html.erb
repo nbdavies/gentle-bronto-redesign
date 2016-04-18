@@ -1,0 +1,31 @@
+<div class="col m4 l4 s6">
+<div class="card small">
+	<div class="">
+	<% if post.image_url %>
+		<div class="card-image">
+			<img src="<%= post.image_url%>" alt="<%= post.message %>"/>
+	<% else %>
+		<div class="card-panel">
+	<% end %>
+			<% if post.title %>
+				<span class="card-title">
+					<% if post.link_url %>
+						<a href="<%= post.link_url %>"><%= post.title %></a>
+					<% else %>
+						<%= post.title %>
+					<% end %>
+				</span>
+			<% end %>
+			<div class="">
+				<span><%= post.created_at.strftime("%B %e, %Y") %></span>
+				<p><%= post.message %></p>
+			</div>
+			<% if post.facebook_id %>
+				<div class="card-action">
+					<a href="http://www.facebook.com/<%= post.facebook_id %>">more</a>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+</div>

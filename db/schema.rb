@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160413220235) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "message"
-    t.string   "facebook_post_id"
+    t.string   "facebook_id"
     t.string   "title"
     t.string   "image_url"
     t.string   "link_url"

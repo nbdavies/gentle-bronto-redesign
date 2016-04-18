@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	validates :facebook_post_id, uniqueness: true
+	validates :facebook_id, uniqueness: true
 
 	def self.facebook_load
 		@graph = Koala::Facebook::API.new(ENV["APP_TOKEN"]+"|"+ENV["APP_SECRET"])
@@ -15,9 +15,9 @@ class Post < ActiveRecord::Base
 				end
 				params = {
 					message:          post["message"], 
-					facebook_post_id: post["id"], 
+					facebook_id: 			post["id"], 
 					created_at:       DateTime.parse(post["created_time"]),
-					title:            post["story"] || post["message"][0..140],
+					title:            post["story"],
 					link_url:         link_url || "https://www.facebook.com/"+post["id"],
 					image_url: 				image_url
 				}
