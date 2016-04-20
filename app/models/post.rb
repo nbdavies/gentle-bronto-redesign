@@ -27,4 +27,14 @@ class Post < ActiveRecord::Base
 		end
 	end
 
+	def short_message
+		string = self.message
+		string = string.split("http")[0] #stop before a URL
+		return string if string.length < 70
+		base = string[0..50]
+		bonus = string[51..70].split(".!?")[0]+"..."
+		return base + bonus
+		
+	end
+
 end

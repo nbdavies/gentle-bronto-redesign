@@ -1,3 +1,14 @@
-<% @posts.each do |post| %>
-	<%= render template: 'posts/show', locals: {post: post} %>
-<% end %>
+<div class="col-md-6">
+	<ul class="clearfix">
+		<% @posts[0..9].each do |post| %>
+			<%= render template: 'posts/show', locals: {post: post} %>
+		<% end %>
+	</ul>
+</div>
+<div class="col-md-6">
+	<ul class="clearfix">
+		<% @posts[10..19].each do |post| %>
+			<%= render template: 'posts/show', locals: {post: post} %>
+		<% end %>
+	</ul>
+</div>

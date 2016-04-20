@@ -1,31 +1,28 @@
-<div class="col m4 l4 s6">
-<div class="card small">
-	<div class="">
-	<% if post.image_url %>
-		<div class="card-image">
-			<img src="<%= post.image_url%>" alt="<%= post.message %>"/>
+<li>
+	<small class="text-muted">
+		<%= post.created_at.strftime("%B %e, %Y") %>
+	</small>
+
+	<% if post.title %>
+		<p>
+		<% if post.link_url %>
+			<a href="<%= post.link_url %>"><%= post.title %></a>
+		<% else %>
+			<%= post.title %>
+		<% end %>
+		<% if post.facebook_id || (post.message.length > 75) %>
+			<a href="http://www.facebook.com/<%= post.facebook_id %>" class="badge pull-right">more</a>
+		<% end %>
+		</p>
 	<% else %>
-		<div class="card-panel">
+
+		<% if post.message %>
+			<p>
+				<%= post.short_message %>
+			<% if post.facebook_id || (post.message.length > 75) %>
+				<a href="http://www.facebook.com/<%= post.facebook_id %>" class="badge pull-right">more</a>
+			<% end %>
+			</p>
+		<% end %>
 	<% end %>
-			<% if post.title %>
-				<span class="card-title">
-					<% if post.link_url %>
-						<a href="<%= post.link_url %>"><%= post.title %></a>
-					<% else %>
-						<%= post.title %>
-					<% end %>
-				</span>
-			<% end %>
-			<div class="">
-				<span><%= post.created_at.strftime("%B %e, %Y") %></span>
-				<p><%= post.message %></p>
-			</div>
-			<% if post.facebook_id %>
-				<div class="card-action">
-					<a href="http://www.facebook.com/<%= post.facebook_id %>">more</a>
-				</div>
-			<% end %>
-		</div>
-	</div>
-</div>
-</div>
+</li>
