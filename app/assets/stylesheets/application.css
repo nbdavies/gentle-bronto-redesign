@@ -66,3 +66,11 @@ a.svg {
 a {
   color: green;
 }
+
+.thumb {
+  max-height: 150px;
+  overflow: hidden;
+}
+.thumb img {
+  max-width: 100%;
+}

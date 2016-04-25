@@ -9,11 +9,9 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="upcoming">
-    	<ul>
     	<% @upcoming.each do |event| %>
-				<%= render template: 'events/show', locals: {event: event} %>
+				<%= render template: 'events/card', locals: {event: event} %>
 			<% end %>
-			</ul>
     </div>
     <div role="tabpanel" class="tab-pane" id="past">
     	<ul>
