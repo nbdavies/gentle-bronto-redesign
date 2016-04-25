@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
 			place_name = event["place"]["name"]
 			location = event["place"]["location"]
 			if location
-				address_string = location["street"] + location["city"] + location["state"] + location["zip"]
+				address_string = location["street"] +" "+location["city"] +", "+ location["state"] +" "+ location["zip"]
 				latitude = location["latitude"]
 				longitude = location["longitude"]
 			end
