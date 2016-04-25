@@ -1,14 +1,14 @@
-<div class="col-sm-6 col-md-4">
+<div class="col-sm-12 col-md-6">
   <div class="thumbnail">
   	<div class="thumb">
 	    <img src="<%= event.image_url %>" alt="event photo">
+	    <div class="overlay">
+		    <h3><%= event.name %></h3>
+		    <p><span class="text-muted"><%= event.start_time.to_date.strftime("%B %e, %Y ") + event.start_time.to_time.localtime.strftime("%l:%M %p") %></span></p>
+	      <p><a href="http://www.google.com/maps/place/<%= event.location_address %>/@<%= event.latitude %>,<%= event.longitude %>"><%= event.location_name %></a></p>
+	      <p><a href="http://www.facebook.com/<%= event.facebook_id %>" class="btn btn-primary" role="button">Details</a></p>
+	    </div>
 	  </div>
-    <div class="caption">
-      <h3><%= event.name %></h3>
-      <p><span class="text-muted"><%= event.start_time.strftime("%B %e, %Y") %></span></p>
-      <p><a href="http://www.google.com/maps/place/<%= event.location_address %>/@<%= event.latitude %>,<%= event.longitude %>"><%= event.location_name %></a></p>
-      <p><a href="http://www.facebook.com/<%= event.facebook_id %>" class="btn btn-primary" role="button">Details</a></p>
-    </div>
   </div>
 </div>
 

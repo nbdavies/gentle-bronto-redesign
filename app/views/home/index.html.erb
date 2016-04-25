@@ -1,20 +1,14 @@
-<div class="row">
-	<%= render template: 'posts/index' %>
-</div>	
-<div class="row">
-	<h1><a name="music">Music</a></h1>
-</div>	
-<div class="row">
-	<%= render './player' %>
-</div>
-<div class="row">
-	<%= render template: 'events/index' %>
-</div>
-<div class="row">
-	<h1><a name="about-us">About Us</a></h1>
-	<%= render './about_us' %>
-</div>
-<div class="row">
-	<h1><a name="friends">Friends</a></h1>
-	<%= render './friends' %>
-</div>
+<%= render template: 'posts/index' %>
+
+<div class="row text-left"><h1><a name="music">Music</a></h1></div>
+
+<div class="row"><%= render './player' %></div>
+
+<div class="row"><%= render template: 'events/index' %></div>
+
+<div class="row"><%= render './about_us' %></div>
+
+<div class="row"><%= render './friends' %></div>
+
+<hr>
+<footer class="text-center"><a href="https://github.com/nbdavies/gentle-bronto-redesign">What's under the hood?</a></footer>

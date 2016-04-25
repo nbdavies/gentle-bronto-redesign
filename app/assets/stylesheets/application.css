@@ -14,6 +14,16 @@
  *= require_self
  */
 
+body {
+  background-image: url("/tree_bark.png");
+}
+.container {
+  background-color: rgba(255,255,255,0.7);
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 #shows {
   margin-bottom: -35px;
 }
@@ -68,9 +78,35 @@ a {
 }
 
 .thumb {
-  max-height: 150px;
+  height: 210px;
   overflow: hidden;
+  background-color: black;
+  position: relative;
 }
 .thumb img {
   max-width: 100%;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.overlay {
+  padding: 5px;
+  z-index: 1001;
+  position: relative;
+}
+.overlay h3 {
+  color: white;
+}
+.overlay p .text-muted {
+  color: #BBBBBB;
+}
+
+.overlay p a {
+  color: white;
+}
+
+h2 {
+  color: darkgreen;
 }

@@ -48,7 +48,7 @@ $(document).ready(function(){
 		$button = $("#news-prev");
 		event.preventDefault();
 		if ($button.hasClass("disabled")) return; 
-		$("news-next").removeClass("disabled");
+		$("#news-next").removeClass("disabled");
 		$("#news-right").children().detach();
 		var newsLeft = $("#news-left").children();
 		$("#news-left").children().detach();
