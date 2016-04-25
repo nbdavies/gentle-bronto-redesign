@@ -2,10 +2,12 @@ class Post < ActiveRecord::Base
 	validates :facebook_id, uniqueness: true
 
 	def self.facebook_load
+		return nil if !ENV["APP_TOKEN"] || !ENV["APP_SECRET"]
 		@graph = Koala::Facebook::API.new(ENV["APP_TOKEN"]+"|"+ENV["APP_SECRET"])
 		connection = @graph.get_connection(814804005201022, "posts", limit: 100)
 		until connection.count == 0 do
 			connection.each do |post|
+				return nil if Post.find_by(facebook_id: post["id"])
 				attachment = @graph.get_connections(post["id"], "attachments")[0]
 				if attachment 
 					link_url = attachment["url"] #TODO: strip off the facebook portion if external link
@@ -21,7 +23,7 @@ class Post < ActiveRecord::Base
 					link_url:         link_url || "https://www.facebook.com/"+post["id"],
 					image_url: 				image_url
 				}
-				Post.create(params)
+				Post.find_or_create_by(params)
 			end
 			connection = connection.next_page
 		end

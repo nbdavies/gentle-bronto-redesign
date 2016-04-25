@@ -29,7 +29,7 @@ class Event < ActiveRecord::Base
 			image_url: 				image_url,
 			attending_count: 	attending_count
 		}
-		Event.create(params)
+		Event.find_or_create_by(params)
 	end
 
 end
