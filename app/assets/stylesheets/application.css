@@ -14,18 +14,37 @@
  *= require_self
  */
 
+#shows {
+  margin-bottom: -35px;
+}
 .logo {
-	max-width: 10%;
+  width: 128px;
 	display: inline-block;
 	text-align: top;
+  border-radius: 5px;
+  z-index: -1;
 }
 h1 {
 	display: inline-block;
 	text-align: top;
 	vertical-align: top;
 }
+
+.bandname{
+  color: green;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 36px;
+  margin-top: 0px;
+  margin-bottom: 80px;
+  z-index: 1;
+  position: relative;
+}
+.icon-row {
+  margin-bottom: -120px;
+}
 object {
-	width: 24px;
+	width: 40px;
 }
 
 a.svg:after {
@@ -39,4 +58,11 @@ a.svg:after {
 a.svg {
   position: relative;
   display: inline-block;
+}
+.btn-lg {
+  width: 100%;
+}
+
+a {
+  color: green;
 }

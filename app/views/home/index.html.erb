@@ -1,1 +1,20 @@
-<iframe style="border: 0; width: 500px; height: 500px;" src="https://bandcamp.com/EmbeddedPlayer/album=1717899519/size=large/bgcol=ffffff/linkcol=63b2cc/minimal=true/transparent=true/" seamless><a href="http://gentlebrontosaurus.bandcamp.com/album/names-of-things-and-what-they-do">Names of Things and What They Do by Gentle Brontosaurus</a></iframe>
+<div class="row">
+	<%= render template: 'posts/index' %>
+</div>	
+<div class="row">
+	<h1><a name="music">Music</a></h1>
+</div>	
+<div class="row">
+	<%= render './player' %>
+</div>
+<div class="row">
+	<%= render template: 'events/index' %>
+</div>
+<div class="row">
+	<h1><a name="about-us">About Us</a></h1>
+	<%= render './about_us' %>
+</div>
+<div class="row">
+	<h1><a name="friends">Friends</a></h1>
+	<%= render './friends' %>
+</div>

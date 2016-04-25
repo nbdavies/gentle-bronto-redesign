@@ -1,11 +1,40 @@
-<nav>
-	<%= image_tag "gb_logo", class: "logo" %>
-	<a href="/"><h1>Gentle Brontosaurus</h1></a>
-	<a href="https://gentlebrontosaurus.bandcamp.com" class="svg"><object type="image/svg+xml" data="/bandcamp.svg"></object></a>
-	<a href="https://www.facebook.com/GentleBrontosaurus/" class="svg"><object type="image/svg+xml" data="/facebook.svg"></object></a>
-	<a href="https://www.reverbnation.com/gentlebrontosaurus" class="svg"><object type="image/svg+xml" data="/reverbnation.svg"></object></a>
-	<a href="https://soundcloud.com/gentle-brontosaurus" class="svg"><object type="image/svg+xml" data="/soundcloud.svg"></object></a>
-	<a href="https://twitter.com/GentleBronto" class="svg">
-		<object type="image/svg+xml" data="/twitter.svg"></object>
-	</a>
+<nav class="navbar bg-success">
+	<div class="row col-md-12 icon-row">
+		<div class="text-center">
+			<a href="https://gentlebrontosaurus.bandcamp.com" class="svg media-bottom"><object type="image/svg+xml" data="/bandcamp.svg"></object></a>
+			<a href="https://www.facebook.com/GentleBrontosaurus/" class="svg media-bottom"><object type="image/svg+xml" data="/facebook.svg"></object></a>
+			<%= image_tag "gb_logo", class: "logo" %>
+			<a href="https://soundcloud.com/gentle-brontosaurus" class="svg media-bottom">
+				<object type="image/svg+xml" data="/soundcloud.svg"></object>
+			</a>
+			<a href="https://twitter.com/GentleBronto" class="svg media-bottom">
+				<object type="image/svg+xml" data="/twitter.svg"></object>
+			</a>
+		</div>
+	</div>
+
+	<div class="center-block text-center">
+		<a href="/" class="center-block text-center">
+			<h1 class="text-center bandname">
+				GENTLE BRONTOSAURUS
+			</h1>
+		</a>
+	</div>
 </nav>
+<div class="row">
+	<div class="col-md-2 col-md-offset-1">
+		<a href="#news" role="button" class="btn btn-success btn-lg">News</a>
+	</div>
+	<div class="col-md-2">
+		<a href="#music" role="button" class="btn btn-success btn-lg">Music</a>
+	</div>
+	<div class="col-md-2">
+	<a href="#shows" role="button" class="btn btn-success btn-lg col-md-2">Shows</a>
+	</div>
+	<div class="col-md-2">
+	<a href="#about-us" role="button" class="btn btn-success btn-lg col-md-2">About Us</a>
+	</div>
+	<div class="col-md-2">
+	<a href="#friends" role="button" class="btn btn-success btn-lg col-md-2">Friends</a>
+	</div>
+</div>

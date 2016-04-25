@@ -1,0 +1,5 @@
+<li>
+	<span class="text-muted"><%= event.start_time.strftime("%B %e, %Y") %></span> // <a href="http://www.google.com/maps/place/<%= event.location_address %>/@<%= event.latitude %>,<%= event.longitude %>"><span><%= event.location_name %></span></a>
+	<p><a href="http://www.facebook.com/<%= event.facebook_id %>"><%= event.name %></a></p>
+
+</li>

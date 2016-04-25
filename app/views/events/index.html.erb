@@ -1,0 +1,29 @@
+<div>
+	<h1 id="shows"><a name="shows">Shows</a></h1>
+  <ul class="nav nav-tabs" role="tablist">
+  	
+    <li role="presentation" class="active pull-right"><a href="#upcoming" aria-controls="upcoming" role="tab" data-toggle="tab">Upcoming</a></li>
+    <li role="presentation" class="pull-right"><a href="#past" aria-controls="past" role="tab" data-toggle="tab">Past</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="upcoming">
+    	<ul>
+    	<% @upcoming.each do |event| %>
+				<%= render template: 'events/show', locals: {event: event} %>
+			<% end %>
+			</ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="past">
+    	<ul>
+    	<% @past.each do |event| %>
+				<%= render template: 'events/show', locals: {event: event} %>
+			<% end %>
+			</ul>
+    </div>
+  </div>
+
+</div>
+
+
