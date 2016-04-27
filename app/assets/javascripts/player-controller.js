@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	request = $.ajax({
+		url: '/tracks',
+		dataType: "json"
+	});
+	request.done(function(responseData){
+		responseData.forEach(function(track){
+			$("#"+track.id).attr("src",track.url)
+		});
+	});
 	$(".list-group-item").on("click", function(event){
 		event.preventDefault();
 		var player = $(this).find("audio")[0];
