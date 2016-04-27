@@ -110,3 +110,6 @@ a {
 h2 {
   color: darkgreen;
 }
+.cover {
+  min-width: 300px;
+}

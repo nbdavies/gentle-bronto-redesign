@@ -1,0 +1,10 @@
+<h1><a name="music">Music</a></h1>
+
+<h2>Names of Things and What They Do (2015) <small><a href="http://gentlebrontosaurus.bandcamp.com/album/names-of-things-and-what-they-do">Available now on Bandcamp</a></small></h2>
+<img src="http://f4.bcbits.com/img/a0840441803_10.jpg" alt="Names of Things and What They Do" class="col-md-6 col-sm-6 col-xs-6 cover">
+
+<div class="list-group col-md-6 col-sm-6 col-xs-6">
+	<% @tracks.each do |track| %>
+		<%= render template: 'tracks/show', locals: {track: track} %>
+	<% end %>
+</div>
