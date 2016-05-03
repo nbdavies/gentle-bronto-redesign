@@ -118,6 +118,10 @@ a {
 
 h2 {
   color: darkgreen;
+  display: inline-block;
+}
+.pagination {
+  margin-bottom: 10px;
 }
 .cover {
   min-width: 300px;
