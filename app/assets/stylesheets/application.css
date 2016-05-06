@@ -128,4 +128,6 @@ h2 {
   border-radius: 4px;
   border: 1px solid #ddd;
   box-sizing: border-box;
+  padding-left: 0px;
+  padding-right: 0px;
 }
