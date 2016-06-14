@@ -8,10 +8,10 @@ class Event < ActiveRecord::Base
 		start_time = DateTime.parse(event["start_time"])
 		attending_count = event["attending_count"] if start_time < DateTime.now
 		image_url = event["cover"]["source"] if event["cover"]
-		if event["place"] do
+		if event["place"] then
 			place_name = event["place"]["name"]
 			location = event["place"]["location"]
-			if location do
+			if location then
 				address_string = location["street"].to_s + " " +location["city"].to_s + ", " + location["state"].to_s + " " + location["zip"].to_s
 				latitude = location["latitude"]
 				longitude = location["longitude"]
